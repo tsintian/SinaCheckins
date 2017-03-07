@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="OFF">
+	<appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"></PatternLayout>
+		</Console>
+		<File name="log" fileName="logs/error.log" append="false">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"></PatternLayout>
+		</File>
+	</appenders>
+	<loggers>
+
+		<root level="ERROR">
+			<appender-ref ref="Console"></appender-ref>
+			<appender-ref ref="log"></appender-ref>
+		</root>
+
+		<!-- <logger name="log4jEx.Hello" level="ERROR" additivity="false">
+			<appender-ref ref="Console"/>
+			<appender-ref ref="log"></appender-ref>
+		</logger> -->
+	</loggers>
+</configuration>
